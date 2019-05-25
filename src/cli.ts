@@ -11,10 +11,33 @@ config({ path: path.resolve(__dirname, '../.env') });
 
 // console.log(process.env);
 const cli = meow(`
-  Usage:
-`, {});
+Downloading radolan files from DWD FTP, gunzip, untar, gunzip again, organize and upload to AWS S3
+-----------------------------------------------------------------------
+Usage
+  $ u2s3 <input.json>
+  Examples
+  $ u2s3 ./path/to/input.json
+-----------------------------------------------------------------------
+Needs .json input as first argument. An array of entries in the form of
+[
+  {
+    "filePath": "pub/CDC/grids_germany/hourly/radolan/historical/bin/2005/RW-200512.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  }
+]
+date key is optional
+`, {
+    flags: {
+      silent: {
+        alias: 's',
+        type: 'boolean',
+      },
+    },
+  });
 
-console.log(cli.input, cli.flags);
+if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === undefined) {
+  console.log(cli.input, cli.flags);
+}
 
 if (cli.input[0] === undefined) {
   cli.showHelp();
@@ -24,7 +47,7 @@ const data: ITarFileEntry[] = [];
 try {
   fs.statSync(cli.input[0]);
   const fileContent = fs.readFileSync(path.resolve(process.cwd(), cli.input[0]),
-  'utf8');
+    'utf8');
   parsed = JSON.parse(fileContent);
   if (Array.isArray(parsed) === false) {
     throw Error('JSON Data is not an array');
@@ -45,5 +68,6 @@ try {
 
 const opts: IMainOptions = {
   fileList: data,
+  silent: cli.flags.silent !== undefined ? true : false,
 };
 main(opts).catch((err: Error) => { throw err; });
