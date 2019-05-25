@@ -85,36 +85,9 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
       await Promise.all(gunzipTasks).catch((err) => {
         throw err;
       });
-      // .then(() => { console.log('All decompression completed.'); });
-      // tslint:disable-next-line: prefer-for-of
-      // for (let i = 0; i < files.length; i++) {
-      //   // if (files[i].indexOf('.gz') === -1) {
-      //   //   continue;
-      //   // }
-      //   const readstream = fs.createReadStream(`${tmpFolder}/${files[i]}`);
 
-      //   const writestream = fs.createWriteStream(`${tmpGunzippedFolder}/${files[i]}`.replace('.gz', ''));
-      //   pipe(
-      //     [readstream,
-      //       gunzip(),
-      //       writestream,
-      //     ], (error: Error) => {
-      //       if (error) {
-      //         console.error(error);
-      //       }
-      //     });
-
-      // }
-
-      // files.forEach((file: string | Buffer, _i: number, _arr: Array<string | Buffer>) => {
-
-      //   // writestream.on('close', () => {
-      //   //   fs.unlinkSync(`${tmpFolder}/${file}`);
-      //   // });
-      // });
-      // const fsreadstream = fs.createReadStream(`${tmpFolder}/${fn}`);
-      // const resClean = await rimrafAsync(tmpFolder);
-      // console.log(resClean);
+      const resClean = await rimrafAsync(tmpGzipFolder);
+      console.log(resClean);
       // untar & gunzip
       // organize
       // upload to s3
