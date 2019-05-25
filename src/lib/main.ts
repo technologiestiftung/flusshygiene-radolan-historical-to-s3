@@ -4,6 +4,7 @@ import mkdirp from 'mkdirp';
 import path from 'path';
 import pipe from 'pipe-io';
 import ftp from 'promise-ftp';
+import rimraf from 'rimraf';
 import stream from 'stream';
 import tar from 'tar-fs';
 import util from 'util';
@@ -16,7 +17,7 @@ config({ path: path.resolve(__dirname, '../../.env') });
 const mkdirpAsync = util.promisify(mkdirp);
 const readDirAsync = util.promisify(fs.readdir);
 const finishedAsync = util.promisify(stream.finished);
-// const rimrafAsync = util.promisify(rimraf);
+const rimrafAsync = util.promisify(rimraf);
 const client = new ftp();
 const ftpOpts: ftp.Options = {
   host: process.env.FTP_HOST,
@@ -28,10 +29,10 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
 
     // console.log(ftpOpts);
     for (const item of opts.fileList) {
-      const itemName = item.filePath.split('/')[item.filePath.split('/').length -1].split('.')[0];
+      const itemName = item.filePath.split('/')[item.filePath.split('/').length - 1].split('.')[0];
       const tmpGunzippedFolder = path.resolve(process.cwd(), `./tmp/${itemName}/gunzipped`);
-      const tmpFolder = path.resolve(process.cwd(), `./tmp/${itemName}/zipped`);
-      await mkdirpAsync(tmpFolder);
+      const tmpGzipFolder = path.resolve(process.cwd(), `./tmp/${itemName}/zipped`);
+      await mkdirpAsync(tmpGzipFolder);
       await mkdirpAsync(`${tmpGunzippedFolder}`);
       // open ftp connection
       const resConnect = await client
@@ -48,7 +49,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
         [
           ftprstream,
           zlib.createGunzip(),
-          tar.extract(`${tmpFolder}`),
+          tar.extract(`${tmpGzipFolder}`),
         ], (error: Error) => {
           if (error) {
             console.error(error);
@@ -65,7 +66,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
         .end()
         .catch((err: Error) => { throw err; }); // tslint:disable-line: await-promise
       console.log('Response ftp client.end', resDisconnect);
-      const files: string[] = await readDirAsync(tmpFolder, { withFileTypes: false }) as string[];
+      const files: string[] = await readDirAsync(tmpGzipFolder, { withFileTypes: false }) as string[];
       console.log(files);
       // process.exit();
       const gunzipTasks = files.map((file: string) => new Promise((resolve, _reject) => {
@@ -73,7 +74,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
 
           const writestream = fs.createWriteStream(`${tmpGunzippedFolder}/${file}`.replace('.gz', ''));
           writestream.on('close', resolve);
-          const readstream = fs.createReadStream(`${tmpFolder}/${file}`);
+          const readstream = fs.createReadStream(`${tmpGzipFolder}/${file}`);
           readstream.pipe(zlib.createGunzip()).pipe(writestream);
         } catch (error) {
           console.log('in gunzipTasks');
