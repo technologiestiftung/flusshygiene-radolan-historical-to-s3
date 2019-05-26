@@ -1,0 +1,14 @@
+[
+  {
+    "filePath": "pub/CDC/grids_germany/hourly/radolan/historical/bin/2014/RW201406.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/hourly/radolan/historical/bin/2014/RW201407.tar.gz",
+    "date": "2015-01-05T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/hourly/radolan/historical/bin/2014/RW201408.tar.gz",
+    "date": "2015-01-05T00:00:00.000Z"
+  }
+]

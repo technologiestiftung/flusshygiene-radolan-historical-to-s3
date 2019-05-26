@@ -168,7 +168,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
         });
         uploader.once('progress', () => {
           if (silent === false) {
-            process.stdout.write(`upoading: ${params.localFile}\n`);
+            process.stdout.write(`uploading: ${params.localFile}\n`);
             // process.stdout.clearLine();
             // process.stdout.cursorTo(0);
             // readline.clearLine(process.stdout, 0);
