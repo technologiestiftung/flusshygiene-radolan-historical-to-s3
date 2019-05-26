@@ -1,6 +1,7 @@
 import AWS from 'aws-sdk';
 import { config } from 'dotenv';
 import fs from 'fs';
+// import isGzip from 'is-gzip';
 import mkdirp from 'mkdirp';
 import path from 'path';
 import pipe from 'pipe-io';
@@ -73,7 +74,7 @@ const ftpOpts: ftp.Options = {
 let silent = false;
 
 export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
-  silent = opts.silent !== undefined ? opts.silent : false;
+  silent =  false; // opts.silent !== undefined ? opts.silent : false;
   for (const item of opts.fileList) {
     try {
 
@@ -88,7 +89,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
         .connect(ftpOpts)
         .catch((err: Error) => { errorLogger(err); }); // tslint:disable-line: await-promise
       if (silent === false) {
-        process.stdout.write(`Response ftp client.connect ${resConnect}`);
+        process.stdout.write(`Response ftp client.connect ${resConnect}\n`);
       }
       const ftprstream = await ftpClient.get(item.filePath); // tslint:disable-line: await-promise
       pipe(
@@ -98,7 +99,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
           tar.extract(`${tmpGzipFolder}`),
         ], (error: Error) => {
           if (error) {
-            process.stderr.write(`Error exctracting ${JSON.stringify(error)}`);
+            process.stderr.write(`Error exctracting:\n${JSON.stringify(error)}\n`);
           }
         });
 
@@ -120,7 +121,11 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
             `${tmpGunzippedFolder}/${file}`.replace('.gz', ''));
           writestream.on('close', resolve);
           const readstream = fs.createReadStream(`${tmpGzipFolder}/${file}`);
-          readstream.pipe(zlib.createGunzip()).pipe(writestream);
+          if (file.indexOf('.gz') !== -1) {
+            readstream.pipe(zlib.createGunzip()).pipe(writestream);
+          } else {
+            readstream.pipe(writestream);
+          }
         } catch (err) {
           if (silent === false) {
             process.stderr.write(`Error in gunzipTasks for file ${file}\n`);
@@ -128,9 +133,11 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
           errorLogger(err);
         }
       }));
+
       await Promise.all(gunzipTasks).catch((err) => {
         errorLogger(err);
       });
+
       await rimrafAsync(tmpGzipFolder);
       // upload to s3
       // remove from fs
@@ -156,12 +163,12 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
         };
         const uploader = s3Client.uploadFile(params);
         uploader.on('error', (err: Error) => {
-          process.stderr.write(`unable to upload: ${err.stack}`);
+          process.stderr.write(`unable to upload: ${err.stack}\n`);
           reject();
         });
         uploader.once('progress', () => {
           if (silent === false) {
-            process.stdout.write(`upoading: ${params.localFile}`);
+            process.stdout.write(`upoading: ${params.localFile}\n`);
             // process.stdout.clearLine();
             // process.stdout.cursorTo(0);
             // readline.clearLine(process.stdout, 0);
@@ -172,7 +179,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
         });
         uploader.on('end', () => {
           if (silent === false) {
-            process.stdout.write(`\ndone uploading: ${params.localFile}`);
+            process.stdout.write(`\ndone uploading: ${params.localFile}\n`);
           }
           fs.unlinkSync(params.localFile);
           resolve();
@@ -185,7 +192,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
       await rimrafAsync(tmpGunzippedFolder);
       await rimrafAsync(baseItemFolder);
     } catch (error) {
-      errorLogger(error, `Error with item ${item}`);
+      errorLogger(error, `Error with item ${item}\n`);
     }
   }
   shutDownEC2(process.env.AWS_EC2_INSTANCE_ID);

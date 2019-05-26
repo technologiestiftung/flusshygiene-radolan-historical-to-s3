@@ -62,12 +62,12 @@ try {
     }
   }
 } catch (error) {
-  console.log(error.message);
+  console.error(error.message);
   process.exit(1);
 }
 
 const opts: IMainOptions = {
   fileList: data,
-  silent: cli.flags.silent !== undefined ? true : false,
+  silent: cli.flags.silent,
 };
 main(opts).catch((err: Error) => { throw err; });
