@@ -30,7 +30,7 @@ const errorLogger = (error: Error, obj?: any) => {
   process.stderr.write(`${JSON.stringify(obj)}\n`);
 };
 
-const ec2 = new AWS.EC2();
+const ec2 = new AWS.EC2({region: 'eu-central-1'});
 
 const shutDownEC2 = (instanceId: string|undefined) => {
   try {
