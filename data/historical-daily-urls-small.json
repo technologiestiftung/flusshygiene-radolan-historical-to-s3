@@ -1,0 +1,22 @@
+[
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2006/SF-200610.tar.gz",
+    "date": "2016-03-02T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200910.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201101.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201408.tar.gz",
+    "date": "2015-01-05T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201812.tar.gz",
+    "date": "2019-01-07T14:08:00.000Z"
+  }
+]

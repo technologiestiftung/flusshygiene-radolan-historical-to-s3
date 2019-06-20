@@ -12,5 +12,14 @@
     "statusBar.background": "#12cadf",
     "statusBarItem.hoverBackground": "#0e9fb0",
     "statusBar.foreground": "#15202b"
-  }
+  },
+  "spellright.language": [
+    "en",
+    "de"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ]
 }
