@@ -23,6 +23,7 @@ const mkdirpAsync = util.promisify(mkdirp);
 const readDirAsync = util.promisify(fs.readdir);
 const finishedAsync = util.promisify(stream.finished);
 const rimrafAsync = util.promisify(rimraf);
+const renameAsync = util.promisify(fs.rename);
 const errorLogger = (error: Error, obj?: any) => {
   process.stderr.write(`${error.message}\n`);
   process.stderr.write(`${error.stack}\n`);
@@ -118,8 +119,14 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
           if (silent === false) {
             process.stdout.write('Doh. We have a .tar in the .tar.gz');
           }
+
           const tarFilePath = `${tmpGunzippedFolder}/${file}`;
-          const freadstream = fs.createReadStream(tarFilePath);
+          const movedTarFilePath = path.resolve(tmpGunzippedFolder, '..');
+          if (silent === false) {
+            process.stdout.write(`Moving tar to subfolder ${movedTarFilePath}`);
+          }
+          await renameAsync(tarFilePath, `${movedTarFilePath}/${file}`);
+          const freadstream = fs.createReadStream(`${movedTarFilePath}/${file}`);
           pipe(
             [
               freadstream,
@@ -128,7 +135,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
               if (error) {
                 process.stderr.write(`Error exrtracting tar in tar.gs\n${JSON.stringify(error)}`);
               }
-              rimrafAsync(tarFilePath);
+              rimrafAsync(`${movedTarFilePath}/${file}`);
             });
           await finishedAsync(freadstream);
         }
