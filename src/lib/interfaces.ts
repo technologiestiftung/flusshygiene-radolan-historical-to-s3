@@ -1,7 +1,7 @@
 
 export interface IMainOptions {
   fileList: ITarFileEntry[];
-  silent?: boolean;
+  silent: boolean;
 }
 
 export interface ITarFileEntry {

@@ -1,0 +1,590 @@
+[
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2006/SF-200610.tar.gz",
+    "date": "2016-03-02T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2006/SF-200611.tar.gz",
+    "date": "2016-03-02T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2006/SF-200612.tar.gz",
+    "date": "2016-03-02T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200701.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200702.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200703.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200704.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200705.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200706.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200707.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200708.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200709.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200710.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200711.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2007/SF-200712.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200801.tar.gz",
+    "date": "2016-03-01T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200802.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200803.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200804.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200805.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200806.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200807.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200808.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200809.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200810.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200811.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2008/SF-200812.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200901.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200902.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200903.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200904.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200905.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200906.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200907.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200908.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200909.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200910.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200911.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2009/SF200912.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201001.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201002.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201003.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201004.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201005.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201006.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201007.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201008.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201009.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201010.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201011.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2010/SF201012.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201101.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201102.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201103.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201104.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201105.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201106.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201107.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201108.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201109.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201110.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201111.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2011/SF201112.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201201.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201202.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201203.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201204.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201205.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201206.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201207.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201208.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201209.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201210.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201211.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2012/SF201212.tar.gz",
+    "date": "2014-07-08T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201301.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201302.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201303.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201304.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201305.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201306.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201307.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201308.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201309.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201310.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201311.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2013/SF201312.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201401.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201402.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201403.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201404.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201405.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201406.tar.gz",
+    "date": "2014-07-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201407.tar.gz",
+    "date": "2015-01-05T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201408.tar.gz",
+    "date": "2015-01-05T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201409.tar.gz",
+    "date": "2015-01-05T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201410.tar.gz",
+    "date": "2015-01-05T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201411.tar.gz",
+    "date": "2015-01-05T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2014/SF201412.tar.gz",
+    "date": "2015-01-05T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201501.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201502.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201503.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201504.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201505.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201506.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201507.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201508.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201509.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201510.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201511.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2015/SF201512.tar.gz",
+    "date": "2016-01-07T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201601.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201602.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201603.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201604.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201605.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201606.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201607.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201608.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201609.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201610.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201611.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2016/SF201612.tar.gz",
+    "date": "2017-01-16T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201701.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201702.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201703.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201704.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201705.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201706.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201707.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201708.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201709.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201710.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201711.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2017/SF201712.tar.gz",
+    "date": "2018-01-15T00:00:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201801.tar.gz",
+    "date": "2019-01-07T14:16:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201802.tar.gz",
+    "date": "2019-01-07T14:15:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201803.tar.gz",
+    "date": "2019-01-07T14:15:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201804.tar.gz",
+    "date": "2019-01-07T14:14:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201805.tar.gz",
+    "date": "2019-01-07T14:13:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201806.tar.gz",
+    "date": "2019-01-07T14:12:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201807.tar.gz",
+    "date": "2019-01-07T14:11:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201808.tar.gz",
+    "date": "2019-01-07T14:10:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201809.tar.gz",
+    "date": "2019-01-07T14:10:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201810.tar.gz",
+    "date": "2019-01-07T14:08:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201811.tar.gz",
+    "date": "2019-01-07T14:07:00.000Z"
+  },
+  {
+    "filePath": "pub/CDC/grids_germany/daily/radolan/historical/2018/SF201812.tar.gz",
+    "date": "2019-01-07T14:08:00.000Z"
+  }
+]

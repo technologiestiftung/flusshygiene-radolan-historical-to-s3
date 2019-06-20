@@ -4,7 +4,7 @@ This tool does:
 
 - Download `.tar.gz` from the DWD FTP Server [ftp://ftp-cdc.dwd.de/](ftp://ftp-cdc.dwd.de/).  
 - Gunzips, untars to fs
-- Gunzips again 😔
+- ~~Gunzips again 😔~~(Only the RW file product is gzipped within the tar archives)
 - Uploads to an AWS S3 Bucket
 
 
@@ -44,11 +44,9 @@ docker build -t technologiestiftung/flusshygiene-radolan-u2s3 .
 
 If you don't provide a path to an `.json` file for the container it will use the default [./data/historical-hourly-urls.json](data/historical-hourly-urls.json).  
 
-
 ```bash
 docker run -it --env-file ./example.env --name radolan-u2s3 technologiestiftung/flusshygiene-radolan-u2s3 ./test/ftp-server/urls.json
 ```
-
 
 ## Testing
 

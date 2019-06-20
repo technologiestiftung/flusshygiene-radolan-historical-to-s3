@@ -30,9 +30,9 @@ const errorLogger = (error: Error, obj?: any) => {
   process.stderr.write(`${JSON.stringify(obj)}\n`);
 };
 
-const ec2 = new AWS.EC2({region: 'eu-central-1'});
+const ec2 = new AWS.EC2({ region: process.env.AWS_REGION });
 
-const shutDownEC2 = (instanceId: string|undefined) => {
+const shutDownEC2 = (instanceId: string | undefined) => {
   try {
     if (instanceId === undefined) {
       throw Error('No instance ID');
@@ -57,7 +57,7 @@ const shutDownEC2 = (instanceId: string|undefined) => {
 const s3Client = s3.createClient({
   s3Options: {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    region: 'eu-central-1',
+    region: process.env.AWS_REGION,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     // endpoint: 's3.yourdomain.com',
     // sslEnabled: false
@@ -74,15 +74,15 @@ const ftpOpts: ftp.Options = {
 let silent = false;
 
 export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
-  silent =  false; // opts.silent !== undefined ? opts.silent : false;
+  silent = opts.silent;
   for (const item of opts.fileList) {
     try {
 
       const itemName = item.filePath.split('/')[item.filePath.split('/').length - 1].split('.')[0];
       const baseItemFolder = path.resolve(process.cwd(), `./tmp/${itemName}`);
       const tmpGunzippedFolder = path.resolve(process.cwd(), `./tmp/${itemName}/gunzipped`);
-      const tmpGzipFolder = path.resolve(process.cwd(), `./tmp/${itemName}/zipped`);
-      await mkdirpAsync(tmpGzipFolder);
+      // const tmpGzipFolder = path.resolve(process.cwd(), `./tmp/${itemName}/zipped`);
+      // await mkdirpAsync(tmpGzipFolder); // only needed for the hourly RW data
       await mkdirpAsync(`${tmpGunzippedFolder}`);
 
       const resConnect = await ftpClient
@@ -96,7 +96,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
         [
           ftprstream,
           zlib.createGunzip(),
-          tar.extract(`${tmpGzipFolder}`),
+          tar.extract(`${tmpGunzippedFolder}`),
         ], (error: Error) => {
           if (error) {
             process.stderr.write(`Error exctracting:\n${JSON.stringify(error)}\n`);
@@ -110,40 +110,64 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
       if (silent === false) {
         process.stdout.write(`Response ftp client.end ${resDisconnect}\n`);
       }
-      const gzipFiles: string[] = await readDirAsync(tmpGzipFolder, { withFileTypes: false }) as string[];
-      if (silent === false) {
-        process.stdout.write(`${JSON.stringify(gzipFiles)}\n`);
-      }
-      const gunzipTasks = gzipFiles.map((file: string) => new Promise(async (resolve, _reject) => {
-        try {
-          await mkdirpAsync(`${tmpGunzippedFolder}`);
-          const writestream = fs.createWriteStream(
-            `${tmpGunzippedFolder}/${file}`.replace('.gz', ''));
-          writestream.on('close', resolve);
-          const readstream = fs.createReadStream(`${tmpGzipFolder}/${file}`);
-          if (file.indexOf('.gz') !== -1) {
-            readstream.pipe(zlib.createGunzip()).pipe(writestream);
-          } else {
-            readstream.pipe(writestream);
-          }
-        } catch (err) {
+      const extractedFiles: string[] = await readDirAsync(tmpGunzippedFolder, { withFileTypes: false }) as string[];
+      // console.log(extractedFiles);
+      for (const file of extractedFiles) {
+        if (file.endsWith('.tar') === true) {
+          // console.log('we have a tar inside');
           if (silent === false) {
-            process.stderr.write(`Error in gunzipTasks for file ${file}\n`);
+            process.stdout.write('Doh. We have a .tar in the .tar.gz');
           }
-          errorLogger(err);
+          const tarFilePath = `${tmpGunzippedFolder}/${file}`;
+          const freadstream = fs.createReadStream(tarFilePath);
+          pipe(
+            [
+              freadstream,
+              tar.extract(tmpGunzippedFolder),
+            ], (error: Error) => {
+              if (error) {
+                process.stderr.write(`Error exrtracting tar in tar.gs\n${JSON.stringify(error)}`);
+              }
+              rimrafAsync(tarFilePath);
+            });
+          await finishedAsync(freadstream);
         }
-      }));
+      }
+      // const gzipFiles: string[] = await readDirAsync(tmpGzipFolder, { withFileTypes: false }) as string[];
+      // if (silent === false) {
+      //   process.stdout.write(`${JSON.stringify(gzipFiles)}\n`);
+      // }
+      // const gunzipTasks = gzipFiles.map((file: string) => new Promise(async (resolve, _reject) => {
+      //   try {
+      //     await mkdirpAsync(`${tmpGunzippedFolder}`);
+      //     const writestream = fs.createWriteStream(
+      //       `${tmpGunzippedFolder}/${file}`.replace('.gz', ''));
+      //     writestream.on('close', resolve);
+      //     const readstream = fs.createReadStream(`${tmpGzipFolder}/${file}`);
+      //     if (file.indexOf('.gz') !== -1) {
+      //       readstream.pipe(zlib.createGunzip()).pipe(writestream);
+      //     } else {
+      //       readstream.pipe(writestream);
+      //     }
+      //   } catch (err) {
+      //     if (silent === false) {
+      //       process.stderr.write(`Error in gunzipTasks for file ${file}\n`);
+      //     }
+      //     errorLogger(err);
+      //   }
+      // }));
 
-      await Promise.all(gunzipTasks).catch((err) => {
-        errorLogger(err);
-      });
+      // await Promise.all(gunzipTasks).catch((err) => {
+      //   errorLogger(err);
+      // });
 
-      await rimrafAsync(tmpGzipFolder);
+      // await rimrafAsync(tmpGzipFolder);
       // upload to s3
       // remove from fs
       // if(silent === false){
       // process.stdout(tmpGunzippedFolder);
       // }
+      // if (doUpload === true) {
       const radolanFiles: string[] = await readDirAsync(tmpGunzippedFolder, { withFileTypes: false }) as string[];
       const uploadTasks = radolanFiles.map((file: string) => new Promise(async (resolve, reject) => {
         const fileInfo = radolanFilenameParser(file);
@@ -191,6 +215,7 @@ export const main: (opts: IMainOptions) => Promise<void> = async (opts) => {
       });
       await rimrafAsync(tmpGunzippedFolder);
       await rimrafAsync(baseItemFolder);
+    // }
     } catch (error) {
       errorLogger(error, `Error with item ${item}\n`);
     }
